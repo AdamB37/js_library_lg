@@ -5,6 +5,7 @@
 ### Required
 
 - [ ] Write all code in ES2015.
+- [ ] Complete 25 tested functions.
 - [ ] Create readable documentation for the entire library. 
 - [ ] Write TDD with Jasmine.
 - [ ] Publish package to NPM.
