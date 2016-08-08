@@ -1,4 +1,4 @@
-# JS-Library---LG-
+# js-library_lg
 
 ## Specifications
 
