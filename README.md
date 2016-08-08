@@ -9,6 +9,7 @@
 - [ ] Create readable documentation for the entire library. 
 - [ ] Write TDD with Jasmine.
 - [ ] Create a simple website to display the functions. 
+- [ ] To maintain code quality use git flow. 
 - [ ] The artifact produced is properly licensed, preferably with the [MIT license][mit-license].
 
 
