@@ -7,7 +7,7 @@
 - [ ] Write all code in ES2015.
 - [ ] Complete 24 tested functions.
 - [ ] Write TDD with Jasmine.
-- [ ] Create a simple website with readable documentation of library and display the functions using ExpressJS. 
+- [ ] Create a simple website with a homepage, and a page for readable documentation of library and display the functions using ExpressJS. 
 - [ ] To maintain code quality use git flow. 
 - [ ] The artifact produced is properly licensed, preferably with the [MIT license][mit-license].
 
