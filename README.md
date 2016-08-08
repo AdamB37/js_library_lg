@@ -8,7 +8,7 @@
 - [ ] Complete 24 tested functions.
 - [ ] Create readable documentation for the entire library. 
 - [ ] Write TDD with Jasmine.
-- [ ] Create a simple website to display the functions. 
+- [ ] Create a simple website to display the functions using ExpressJS. 
 - [ ] To maintain code quality use git flow. 
 - [ ] The artifact produced is properly licensed, preferably with the [MIT license][mit-license].
 
