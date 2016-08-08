@@ -8,13 +8,8 @@
 - [ ] Complete 25 tested functions.
 - [ ] Create readable documentation for the entire library. 
 - [ ] Write TDD with Jasmine.
-- [ ] Publish package to NPM.
+- [ ] Create a simple website to display the functions. 
 - [ ] The artifact produced is properly licensed, preferably with the [MIT license][mit-license].
-
-
-### Optional
-
-- [ ] Showcase methods in a simple website app (optional)_.
 
 
 ---
