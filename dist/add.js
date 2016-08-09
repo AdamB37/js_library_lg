@@ -3,9 +3,14 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var mathAdd = function mathAdd(number) {
-  return 0;
+var mathAdd = function mathAdd(num1, num2) {
+  return num1 + num2;
 };
-// number = num1 + num2
 
 exports.mathAdd = mathAdd;
+
+//
+// let x = number1
+// let y = number2
+// if (x + y) {
+//   return sum(number1 + number 2)
