@@ -1,8 +1,4 @@
-const inRange = (num, start, end) => {
-   if ( num >= start && num < end)
-    return true
-   if ( num < start || num > end)
-    return false
-}
+const inRange = (num, start, end) =>
+    num >= start && num < end
 
 export { inRange }

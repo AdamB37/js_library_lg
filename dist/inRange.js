@@ -1,11 +1,10 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 var inRange = function inRange(num, start, end) {
-  if (num >= start && num < end) return true;
-  if (num < start || num > end) return false;
+    return num >= start && num < end;
 };
 
 exports.inRange = inRange;
