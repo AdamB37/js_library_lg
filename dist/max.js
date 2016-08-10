@@ -4,7 +4,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var mathMax = function mathMax(array) {
+  if (!(array instanceof Array)) {
+    return undefined;
+  }
+
   var largestNum = array[0];
+
   var _iteratorNormalCompletion = true;
   var _didIteratorError = false;
   var _iteratorError = undefined;
@@ -35,5 +40,4 @@ var mathMax = function mathMax(array) {
   return largestNum;
 };
 
-// do I have to put a for loop in here?
 exports.mathMax = mathMax;
