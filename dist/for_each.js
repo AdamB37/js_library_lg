@@ -3,18 +3,17 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var map = function map(input, iteratee) {
+var forEach = function forEach(input, iteratee) {
   var fn = iteratee || function (a) {
     return a;
   };
   var target = input || [];
-  var result = [];
 
   for (var key in target) {
-    result.push(fn(target[key], key, target));
+    fn(target[key], key, target);
   }
 
-  return result;
+  return input;
 };
 
-exports.map = map;
+exports.forEach = forEach;

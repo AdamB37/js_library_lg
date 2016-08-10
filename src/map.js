@@ -1,21 +1,14 @@
 const map = (input, iteratee) => {
   let fn = iteratee || ( a => a )
-
-  if( input instanceof Array || typeof( input ) === 'string' || typeof( input ) === 'object') {
-    return objectMap( input, fn )
-  } else {
-    return []
-  }
-}
-
-const objectMap = (input, fn) => {
+  let target = input || []
   let result = []
 
-  for( let key in input ) {
-    result.push( fn( input[ key ], key, input ))
+  for( let key in target ) {
+    result.push( fn( target[ key ], key, target ))
   }
 
   return result
 }
+
 
 export { map }
