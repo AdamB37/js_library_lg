@@ -7,7 +7,7 @@ describe( 'indexOf', () => {
   it( 'returns -1 if the value is not in the array', () => {
     expect(indexOf([1, 2, 1, 4], 8, 1)).toEqual(-1)
   })
-  fit( 'returns -1 if the value is not in the array', () => {
+  it( 'returns -1 if the value is not in the array', () => {
       expect(indexOf([1, 2, 1, 4], 8, 1)).toEqual(-1)
   })
 })
