@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -10,13 +10,12 @@ var indexOf = function indexOf(arr, value) {
     return -1;
   }
 
-  if (typeof arr == 'array') {
-    for (var i = start; i < arr.length; i++) {
-      if (arr[i] === value) {
-        return i;
-      }
+  for (var i = start; i < arr.length; i++) {
+    if (arr[i] === value) {
+      return i;
     }
   }
+
   return -1;
 };
 
