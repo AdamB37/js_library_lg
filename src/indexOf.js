@@ -1,8 +1,7 @@
 const indexOf = (arr, value, start) => {
-for (var i = start; i < arr.length; i++) {
+  for (var i = start; i < arr.length; i++) {
     if (arr[i] === value){
-      let theIndex = i
-      return theIndex
+      return i
     }else
       return -1
   }

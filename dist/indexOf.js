@@ -6,8 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 var indexOf = function indexOf(arr, value, start) {
   for (var i = start; i < arr.length; i++) {
     if (arr[i] === value) {
-      var theIndex = i;
-      return theIndex;
+      return i;
     } else return -1;
   }
 };
