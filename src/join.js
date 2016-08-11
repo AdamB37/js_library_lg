@@ -3,15 +3,14 @@ const join = (arr, separator = ',') => {
    if( ! (arr instanceof Array ) ) {
      return []
    }
-   var values = []
+   let result = ''
 
-   for( var i = 0; i >= 0; i++){
-     values = arr[ i ] + separator
+   for( var i = 0; i === arr.length; i++){
+     result = arr[ i ] + separator
+     console.log(result)
    }
-
-
-
-   return values
+   
+   return result
  }
 
 export { join }

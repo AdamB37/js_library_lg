@@ -10,13 +10,14 @@ var join = function join(arr) {
   if (!(arr instanceof Array)) {
     return [];
   }
-  var values = [];
+  var result = '';
 
-  for (var i = 0; i >= 0; i++) {
-    values = arr[i] + separator;
+  for (var i = 0; i === arr.length; i++) {
+    result = arr[i] + separator;
+    console.log(result);
   }
 
-  return values;
+  return result;
 };
 
 exports.join = join;
