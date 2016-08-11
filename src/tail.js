@@ -1,11 +1,10 @@
-const tail = (array) => {
-  let newArray = []
-    for( var el of array ) {
-      if( el > array[0]) {
-        newArray.push(el)
+const tail = ( array ) => {
+  let newArray = [ ]
+    for( var i = 1; i < array.length; i++ ) {
+        newArray.push( array[i] )
     }
+    return newArray
   }
-  return newArray
-}
+
 
 export { tail }
