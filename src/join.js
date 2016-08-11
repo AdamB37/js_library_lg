@@ -5,11 +5,11 @@ const join = (arr, separator = ',') => {
    }
    let result = ''
 
-   for( var i = 0; i === arr.length; i++){
+   for( var i = 0; i <= arr.length; i++){
      result = arr[ i ] + separator
      console.log(result)
    }
-   
+
    return result
  }
 
