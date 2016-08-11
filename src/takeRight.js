@@ -5,11 +5,9 @@ const takeRight = ( array, size=1 ) => {
 
   let result = []
 
-  for( let index = array.length-1; index >= size || index === size; index--) {
-      result.push(array[index])
-
+  for( let index = 1; index <= size; index++ ) {
+      result.push( array[ array.length - index ] )
    }
-
 
   return result
 }

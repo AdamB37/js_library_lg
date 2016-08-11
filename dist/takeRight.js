@@ -12,8 +12,8 @@ var takeRight = function takeRight(array) {
 
   var result = [];
 
-  for (var index = array.length - 1; index >= size || index === size; index--) {
-    result.push(array[index]);
+  for (var index = 1; index <= size; index++) {
+    result.push(array[array.length - index]);
   }
 
   return result;
