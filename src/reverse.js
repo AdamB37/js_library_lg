@@ -1,20 +1,17 @@
 const reverse = (arr) => {
-  var newArr = []
 
-  for( var i = 0; i == arr.length; i++){
-    console.log('arr', arr)
-    console.log('arr.length', arr.length)
-    console.log('i', i)
-    console.log('arr[i]', arr[i])
-    console.log('values', values)
-    console.log('newArr', newArr)
-    console.log('newArr[i]', newArr[i])
-    console.log('newArr[values]', newArr[values])
-    var values = arr[i]
-    newArr[values] = i
+  if( ! (arr instanceof Array ) ) {
+    return []
   }
-  
-  return arr + newArr
+  var values = []
+
+  for( var i = arr.length - 1; i >= 0; i--){
+    values.push( arr[ i ] )
+  }
+  arr = values
+
+
+  return arr
 }
 
 export { reverse }

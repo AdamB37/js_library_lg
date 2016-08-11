@@ -1,9 +1,12 @@
 import { reverse } from '../dist/reverse'
 
-fdescribe( 'reverse' , ( ) => {
-  it( 'returns a new array with the values in inverse order from input array' , ( ) => {
-    expect( reverse( [1, 2] ) ).toEqual( [2, 1] )
+describe( 'reverse' , ( ) => {
+  it( 'mutates input array with so that values are in inverse order' , ( ) => {
+    expect( reverse( [1, 2, 3] ) ).toEqual( [3, 2, 1] )
   })
 
+  it( 'returns an empty array when input value is not an array' , ( ) => {
+    expect( reverse( 'f' ) ).toEqual( [] )
+  })
 
 })
