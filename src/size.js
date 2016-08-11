@@ -1,7 +1,7 @@
 const size = (obj) => {
-    var iterate = 0
+  var iterate = 0
 
-    for (var props in obj){
+  for (var props in obj){
       iterate ++
     }
 

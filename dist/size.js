@@ -1,15 +1,15 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 var size = function size(obj) {
-    var iterate = 0;
+  var iterate = 0;
 
-    for (var props in obj) {
-        iterate++;
-    }
+  for (var props in obj) {
+    iterate++;
+  }
 
-    return iterate;
+  return iterate;
 };
 exports.size = size;
