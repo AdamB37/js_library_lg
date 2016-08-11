@@ -111,5 +111,147 @@ Like the mathAdd, all you have to do is invoke mathSubtract(integer, integer)
 
 map
 this function helps us map the contents of an array. When you call on this, the result will give you the contents in the correct order, whether it is an array of similar values or a mix of values, collections and strings.
+```
+const map = (input, iteratee) => {
+  let fn = iteratee || ( a => a )
+  let target = input || []
+  let result = []
 
-``` 
+  for( let key in target ) {
+    result.push( fn( target[ key ], key, target ))
+  }
+
+  return result
+}
+
+
+export { map }
+```
+
+concat
+this function helps us assemble multiple arrays and values as one array. This concatenating of different arrays and values may come in handy to help organize data/information.
+```
+const concat = ( ...args ) => {
+  let result = []
+
+  for( let index = 0; index < args.length; index++ ) {
+    const argument = args[ index ]
+
+    if( argument instanceof Array ) {
+      for( let inner = 0; inner < argument.length; inner++ ) {
+        result.push( argument[ inner ] )
+      }
+    } else {
+      result.push( argument )
+    }
+  }
+
+  return result
+}
+
+export { concat }
+```
+chunk
+this function allows us to spilt elements of arrays into groups by size. In the case that the array can't be split evenly, the final chunk will be include all remaining elements.
+```
+const chunk = ( collection, chunkSize=1 ) => {
+  if( ! (collection instanceof Array) ) {
+    return []
+  }
+
+  let result = []
+
+  for( let index = 0; index < collection.length; index += chunkSize ) {
+    let babyResult = []
+
+    for( let baby = 0; baby < chunkSize && index + baby < collection.length; baby++ ) {
+      babyResult.push( collection[ index + baby ] )
+    }
+
+    result.push( babyResult )
+  }
+
+
+  return result
+}
+
+export { chunk }
+```
+forEach
+this function iterates over elements of collection an invokes iteratee for each element. The iteratee is invoked with three arguments: (value, index|key, collection). These functions may stop early by returning false.
+```
+const forEach = (input, iteratee) => {
+  let fn = iteratee || ( a => a )
+  let target = input || []
+
+  for( let key in target ) {
+    fn( target[ key ], key, target )
+  }
+
+  return input
+}
+
+export { forEach }
+```
+indexOf
+this function gets the index of the first occurrence of value in an array, keep in mind that this is found using SameValueZero for equality comparisons.
+```
+const indexOf = (arr, value, start=0) => {
+  if( ! (arr instanceof Array) ) {
+    return -1
+  }
+
+  for (var i = start; i < arr.length; i++) {
+    if (arr[i] === value) {
+      return i
+    }
+  }
+
+  return -1
+}
+
+export { indexOf }
+```
+inRange
+this is a strictly numerical function that checks if n is between start and up to, but not including, end. If end is not specified, it's set to start with start then set to 0. If start is greater than end, the params are swapped to support negative ranges.
+```
+const inRange = (num, start, end) =>
+    num >= start && num < end
+
+export { inRange }
+```
+size
+this function gets the size of a collection by returning its length for an array-like values or the number of own enumberable string keyed properties for objects.
+```
+const size = (obj) => {
+  var iterate = 0
+
+  for (var props in obj){
+      iterate ++
+    }
+
+    return iterate
+
+}
+export { size }
+```
+tail
+this function gets all but the first element of the array.
+```
+const tail = ( array ) => {
+  let newArray = [ ]
+
+  for( let i = 1; i < array.length; i++ ) {
+    newArray.push( array[i] )
+  }
+
+  return newArray
+}
+
+export { tail }
+```
+last 
+join
+nth
+shuffle
+sortBy

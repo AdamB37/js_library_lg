@@ -1,6 +1,6 @@
 import { concat } from '../src/concat'
 
-fdescribe( 'concat', () => {
+describe( 'concat', () => {
   it( 'creates a new array concatenating array with any additional arrays', () => {
     const array = [ 1 ]
     expect(concat( array, 2, [3] ) ).toEqual( [1, 2, 3] )
