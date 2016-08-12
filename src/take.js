@@ -12,7 +12,6 @@ const take = ( array, size=1 ) => {
   for( let index = 0; index < size; index ++) {
     result.push(array[index])
    }
-
   return result
 }
 

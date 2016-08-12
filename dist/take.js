@@ -19,7 +19,6 @@ var take = function take(array) {
   for (var index = 0; index < size; index++) {
     result.push(array[index]);
   }
-
   return result;
 };
 
