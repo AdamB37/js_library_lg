@@ -13,7 +13,7 @@ describe( 'take', () => {
     expect( take( null, 2 ) ).toEqual( [] )
   })
 
-  it( 'returns an empty array for non-array input', () => {
+  it( 'returns an empty array for input size greater than array length', () => {
     expect( take( [ 1, 2, 3, 4 ], 8 ) ).toEqual( [] )
   })
 })
