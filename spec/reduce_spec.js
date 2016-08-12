@@ -1,6 +1,6 @@
 import { reduce } from '../dist/reduce'
 
-fdescribe( 'reduce', () => {
+describe( 'reduce', () => {
   it( 'reduces collection into a single value, starting with memo', () => {
     expect( reduce( [1,2,3], (memo, value) => memo + value, 0 ) ).toEqual( 6 )
   })
