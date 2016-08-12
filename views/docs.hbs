@@ -9,20 +9,10 @@ npm install….
 
 <h1>Use of functions</h1>
 
-<h1>Function list</h1>
-
-//this is where we can type in the list of functions and describe their deliverables.
-
-<h1>For more information or help</h1>
-
-// do we want to include this in the documentation?
-
-
-
 Specific Function Documentation
 
 <h2>chunk</h2>
-this function allows us to spilt elements of arrays into groups by size. In the case that the array can't be split evenly, the final chunk will be include all remaining elements.
+This function allows us to spilt elements of arrays into groups by size. In the case that the array can't be split evenly, the final chunk will be include all remaining elements.
 <pre>
   chunk(['a', 'b', 'c', 'd'], 2);
   // ➜ [['a', 'b'], ['c', 'd']]
@@ -32,7 +22,7 @@ this function allows us to spilt elements of arrays into groups by size. In the 
 </pre>
 
 <h2>concat</h2>
-this function helps us assemble multiple arrays and values as one array. This concatenating of different arrays and values may come in handy to help organize data/information.
+This function helps us assemble multiple arrays and values as one array. This concatenating of different arrays and values may come in handy to help organize data/information.
 <pre>
   var array = [1];
   var other = concat(array, 2, [3], [[4]]);
@@ -44,6 +34,31 @@ this function helps us assemble multiple arrays and values as one array. This co
   // ➜ [1]
 </pre>
 
+<h2>filter</h2>
+This function iterates over elements of collection, returning an array of all elements predicate returns truthy for. The predicate is invoked with three arguments: (value, index|key, collection).
+<pre>
+  var users = [
+    { 'user': 'barney', 'age': 36, 'active': true },
+    { 'user': 'fred',   'age': 40, 'active': false }
+  ];
+
+  filter(users, function(o) { return !o.active; });
+  // ➜ objects for ['fred']
+</pre>
+
+<h2>find</h2>
+This function iterates over elements of collection, returning the first element predicate returns truthy for. The predicate is invoked with three arguments: (value, index|key, collection). These functions may stop early by returning false.
+<pre>
+  var users = [
+    { 'user': 'barney',  'age': 36, 'active': true },
+    { 'user': 'fred',    'age': 40, 'active': false },
+    { 'user': 'pebbles', 'age': 1,  'active': true }
+  ];
+
+  find(users, function(o) { return o.age < 40; });
+  // ➜ object for 'barney'
+</pre>
+
 <h2>forEach</h2>
 this function iterates over elements of collection an invokes iteratee for each element. The iteratee is invoked with three arguments: (value, index|key, collection). These functions may stop early by returning false.
 <pre>
@@ -52,15 +67,25 @@ this function iterates over elements of collection an invokes iteratee for each 
   });
 </pre>
 
+<h2>head</h2>
+this function iterates over elements of collection an invokes iteratee for each element. The iteratee is invoked with three arguments: (value, index|key, collection). These functions may stop early by returning false.
+<pre>
+  head([1, 2, 3]);
+  // ➜ 1
+
+  head([]);
+  // ➜ undefined
+</pre>
+
 <h2>indexOf</h2>
-this function gets the index of the first occurrence of value in an array, keep in mind that this is found using SameValueZero for equality comparisons.
+This function gets the index of the first occurrence of value in an array, keep in mind that this is found using SameValueZero for equality comparisons.
 <pre>
   indexOf([1, 2, 1, 2], 2);
   // ➜ 1
 </pre>
 
 <h2>inRange</h2>
-this is a strictly numerical function that checks if n is between start and up to, but not including, end. If end is not specified, it's set to start with start then set to 0. If start is greater than end, the params are swapped to support negative ranges.
+This is a strictly numerical function that checks if n is between start and up to, but not including, end. If end is not specified, it's set to start with start then set to 0. If start is greater than end, the params are swapped to support negative ranges.
 <pre>
   inRange(3, 2, 4);
   // ➜ true
@@ -77,14 +102,14 @@ Converts all elements in array into a string separated by separator.
 </pre>
 
 <h2>last</h2>
-this function gets the last element of the array.
+This function gets the last element of the array.
 <pre>
   last([1, 2, 3]);
   // ➜ 3
 </pre>
 
 <h2>map</h2>
-this function helps us map the contents of an array. When you call on this, the result will give you the contents in the correct order, whether it is an array of similar values or a mix of values, collections and strings.
+This function helps us map the contents of an array. When you call on this, the result will give you the contents in the correct order, whether it is an array of similar values or a mix of values, collections and strings.
 <pre>
   map([4, 8], square);
   // ➜ [16, 64]
@@ -147,6 +172,29 @@ var array = ['a', 'b', 'c', 'd'];
   // ➜ 'c';
 </pre>
 
+<h2>reduce</h2>
+Reduces collection to a value which is the accumulated result of running each element in collection thru iteratee, where each successive invocation is supplied the return value of the previous.
+var array = ['a', 'b', 'c', 'd'];
+<pre>
+  reduce([1, 2], function(sum, n) {
+    return sum + n;
+  }, 0);
+  // ➜ 3
+</pre>
+
+<h2>reverse</h2>
+Reverses array so that the first element becomes the last, the second element becomes the second to last, and so on.
+var array = ['a', 'b', 'c', 'd'];
+<pre>
+  var array = [1, 2, 3];
+
+  reverse(array);
+  // ➜ [3, 2, 1]
+
+  console.log(array);
+  // ➜ [3, 2, 1]
+</pre>
+
 <h2>shuffle</h2>
 this function creates and array of shuffled values.
 <pre>
@@ -165,8 +213,35 @@ this function gets the size of a collection by returning its length for an array
 </pre>
 
 <h2>tail</h2>
-this function gets all but the first element of the array.
+This function gets all but the first element of the array.
 <pre>
   tail([1, 2, 3]);
   // ➜ [2, 3]
+</pre>
+
+<h2>take</h2>
+Creates a slice of array with n elements taken from the beginning.
+<pre>
+  take([1, 2, 3]);
+  // ➜ [1]
+
+  take([1, 2, 3], 2);
+  // ➜ [1, 2]
+
+  take([1, 2, 3], 5);
+  // ➜ [1, 2, 3]
+</pre>
+
+<h2>takeRight</h2>
+Creates a slice of array with n elements taken from the end.
+<pre>
+  takeRight([1, 2, 3]);
+  // ➜ [3]
+
+  takeRight([1, 2, 3], 2);
+  // ➜ [2, 3]
+
+  takeRight([1, 2, 3], 5);
+  // ➜ [1, 2, 3]
+
 </pre>
