@@ -12,12 +12,11 @@ var join = function join(arr) {
   }
   var result = '';
 
-  for (var i = 0; i <= arr.length; i++) {
-    result = arr[i] + separator;
-    console.log(result);
+  for (var i = 0; i < arr.length; i++) {
+    result += arr[i] + separator;
   }
 
-  return result;
+  return result.trim();
 };
 
 exports.join = join;
