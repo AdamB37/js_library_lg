@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/all', (request, response, next) => {
-  response.send( 'You asked for all users' )
+  response.send({ errors: [], message: 'Hi world' })
 })
 
 module.exports = router;
