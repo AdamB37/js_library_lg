@@ -3,6 +3,10 @@ const take = ( array, size=1 ) => {
     return []
   }
 
+  if( size > array.length ) {
+    return []
+  }
+
   let result = []
 
   for( let index = 0; index < size; index ++) {

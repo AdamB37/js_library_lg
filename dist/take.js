@@ -10,6 +10,10 @@ var take = function take(array) {
     return [];
   }
 
+  if (size > array.length) {
+    return [];
+  }
+
   var result = [];
 
   for (var index = 0; index < size; index++) {

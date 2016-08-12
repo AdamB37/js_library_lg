@@ -12,4 +12,8 @@ describe( 'take', () => {
   it( 'returns an empty array for non-array input', () => {
     expect( take( null, 2 ) ).toEqual( [] )
   })
+
+  it( 'returns an empty array for non-array input', () => {
+    expect( take( [ 1, 2, 3, 4 ], 8 ) ).toEqual( [] )
+  })
 })
