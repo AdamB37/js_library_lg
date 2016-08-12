@@ -9,7 +9,6 @@ const take = ( array, size=1 ) => {
     result.push(array[index])
    }
 
-
   return result
 }
 
